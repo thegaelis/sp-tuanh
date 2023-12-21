@@ -2,7 +2,7 @@
     author: Pham Manh Tien
     created: 06.07.2020
 '''
-import characters
+import game.characters as characters
 
 class Queue:
     default_capacity = 100000000

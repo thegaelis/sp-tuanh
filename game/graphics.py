@@ -1,6 +1,6 @@
 
 import pygame
-from game import GameState
+from game.game import GameState
 import os
 
 class character_spritesheet:

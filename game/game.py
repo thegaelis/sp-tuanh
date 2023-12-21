@@ -1,8 +1,8 @@
 import pygame
 import os
-import graphics
-import characters
-from search import BFS
+import game.graphics as graphics
+import game.characters as characters
+from game.search import BFS
 
 class GameState:
     def __init__(self, file_name):
@@ -673,34 +673,34 @@ class GameRunner:
                     if isEnd:
                         break
 
-if __name__ == '__main__':
-    project_path = os.getcwd()
-    # Get map directory path
-    map_path = os.path.join(project_path, "map")
-    # Get maze directory path
-    maze_path = os.path.join(map_path, "maze")
-    # Get object position in maze
-    object_path = os.path.join(map_path, "agents")
-    print("===== CHOOSE LAYOUT ===== ")
-    pre_layout = input("INPUT LAYOUT YOU WANT SOLVE: ")
-    layout = pre_layout + ".txt"
-    print("===== CHOOSE AGENT ===== ")
-    print("1. KEYBOARD AGENT - YOU MUST FIND SOLUTION")
-    print("2. SEARCH AGENT - A.I WILL FIND SOLUTION FOR YOU")
-    check = False
-    agent_choice = int(input("Input your choice: "))
-    while not check:
-        if agent_choice == 1:
-            agent = "KeyboardAgent"
-            check = True
-        elif agent_choice == 2:
-            agent = "SearchAgent"
-            check = True
-        else:
-            check = False
-        if not check:
-            agent_choice = int(input("Input your choice: "))
+# if __name__ == '__main__':
+#     project_path = os.getcwd()
+#     # Get map directory path
+#     map_path = os.path.join(project_path, "map")
+#     # Get maze directory path
+#     maze_path = os.path.join(map_path, "maze")
+#     # Get object position in maze
+#     object_path = os.path.join(map_path, "agents")
+#     print("===== CHOOSE LAYOUT ===== ")
+#     pre_layout = input("INPUT LAYOUT YOU WANT SOLVE: ")
+#     layout = pre_layout + ".txt"
+#     print("===== CHOOSE AGENT ===== ")
+#     print("1. KEYBOARD AGENT - YOU MUST FIND SOLUTION")
+#     print("2. SEARCH AGENT - A.I WILL FIND SOLUTION FOR YOU")
+#     check = False
+#     agent_choice = int(input("Input your choice: "))
+#     while not check:
+#         if agent_choice == 1:
+#             agent = "KeyboardAgent"
+#             check = True
+#         elif agent_choice == 2:
+#             agent = "SearchAgent"
+#             check = True
+#         else:
+#             check = False
+#         if not check:
+#             agent_choice = int(input("Input your choice: "))
     
-    render = True
-    game = GameRunner()
-    game.rungame(layout, agent, render)
+#     render = True
+#     game = GameRunner()
+#     game.rungame(layout, agent, render)

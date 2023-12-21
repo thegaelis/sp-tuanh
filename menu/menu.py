@@ -1,6 +1,6 @@
 import pygame
 import sys
-from game import GameRunner
+from game.game import GameRunner
 
 # Khởi tạo Pygame
 pygame.init()
@@ -48,7 +48,7 @@ buttons = [
 ]
 
 # Tạo đối tượng game từ lớp TreasureMazeGame
-game = GameRunner()
+ge = GameRunner()
 
 # Vòng lặp chính
 while True:
@@ -63,12 +63,6 @@ while True:
                     if button["rect"].collidepoint(pygame.mouse.get_pos()):
                         if button["text"] == "Chơi":
                             in_menu = False
-                            game.reset_game()  # Thêm hàm reset_game để khởi tạo lại trò chơi
-            else:
-                # Kiểm tra xem người chơi có nhấn vào nút "Exit" trong trò chơi hay không
-                if game.game_over:
-                    in_menu = True
-                    game.game_over = False  # Đặt lại trạng thái game_over khi quay lại menu
 
     # Hiển thị background
     screen.blit(background, (0, 0))
@@ -85,10 +79,10 @@ while True:
         pygame.draw.rect(screen, red, (100, 100, 600, 400))
         
         # Gọi phương thức run_game() từ đối tượng game để bắt đầu trò chơi
-        game.run_game()
+        ge.rungame("map6_1","SearchAgent", True)
 
-        # Kiểm tra xem trò chơi đã kết thúc hay chưa
-        if game.game_over:
+        # Kiểm tra xem trò chơi đã kết thrungame(layout, agent, render)úc hay chưa
+        if ge.game_over:
             # Chuyển biến in_menu về True để quay lại màn hình menu
             in_menu = True
 

@@ -2,7 +2,7 @@
     author: Pham Manh Tien
     created: 01.07.2020
 '''
-import graphics
+import game.graphics as graphics
 import pygame
 
 class character:
