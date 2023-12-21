@@ -1,9 +1,6 @@
-'''
-    author: Pham Manh Tien
-    created: 15.06.2020
-'''
+
 import pygame
-from main import GameState
+from game import GameState
 import os
 
 class character_spritesheet:

@@ -1,6 +1,6 @@
 import pygame
 import sys
-from game import TreasureMazeGame
+from game import GameRunner
 
 # Khởi tạo Pygame
 pygame.init()
@@ -48,7 +48,7 @@ buttons = [
 ]
 
 # Tạo đối tượng game từ lớp TreasureMazeGame
-game = TreasureMazeGame()
+game = GameRunner()
 
 # Vòng lặp chính
 while True:
